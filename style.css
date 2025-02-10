@@ -1,0 +1,81 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.title {
+    font-size: 2em;
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+.wheel-container {
+    position: relative;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border: 16px solid #00ffcc;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    transition: transform 4s ease-out;
+}
+
+.slice {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(to right, #00ffcc, #0099cc);
+    border: 2px solid #00ffcc;
+    color: #000;
+    text-align: center;
+    line-height: 75px; /* Change to center text vertically */
+    transform-origin: 100% 100%;
+}
+
+.slice:nth-child(1) { transform: rotate(0deg); }
+.slice:nth-child(2) { transform: rotate(60deg); }
+.slice:nth-child(3) { transform: rotate(120deg); }
+.slice:nth-child(4) { transform: rotate(180deg); }
+.slice:nth-child(5) { transform: rotate(240deg); }
+.slice:nth-child(6) { transform: rotate(300deg); }
+
+.spin-button, .reveal-button, #redeemButton, #chatSendButton {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.spin-button:hover, .reveal-button:hover, #redeemButton:hover, #chatSendButton:hover {
+    background-color: #0099cc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.output, .redeem-container, .chat-container {
+    margin-top: 20px;
+}
+
+.joke {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #00ffcc;
+}
